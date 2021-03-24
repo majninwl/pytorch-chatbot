@@ -6,6 +6,7 @@ import torch
 
 from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
+#from spacy_utils import bag_of_words, return_token
 import io
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -36,21 +37,51 @@ while True:
         break
 
     sentence = tokenize(sentence)
+    #sentence = return_token(sentence)
     X = bag_of_words(sentence, all_words)
     X = X.reshape(1, X.shape[0])
     X = torch.from_numpy(X).to(device)
 
     output = model(X)
     _, predicted = torch.max(output, dim=1)
+    _, predictions = torch.sort(output, dim=1, descending=True)
+
+    greetings = ['Salutations', 'au revoir', 'merci']
 
     tag = tags[predicted.item()]
+
+    i=1
+
+    while True:
+        tag2 = tags[predictions[0].numpy()[i]]
+        i = i+1
+        if(tag2 not in greetings):
+            break
+
 
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent["tag"]:
-                print(f"{bot_name}: {random.choice(intent['responses'])}")
+                if tag not in greetings:
+                    print(f"{bot_name}: Voulez-vous dire: {intent['patterns'][0]}")
+                    response = input("You: ")
+                    if response == 'oui':
+                        print(f"{bot_name}: {random.choice(intent['responses'])}")
+                    else:
+                        for intent2 in intents['intents']:
+                            if tag2 == intent2["tag"]:
+                                print(f"{bot_name}: Voulez-vous dire: {intent2['patterns'][0]}")
+                                response = input("You: ")
+                                if response == 'oui':
+                                    print(f"{bot_name}: {random.choice(intent2['responses'])}")
+                                else:
+                                    print(f"{bot_name}: Veuillez reformuler votre question")
+                else:
+                    print(f"{bot_name}: {random.choice(intent['responses'])}")
+
+
 
     else:
         print(f"{bot_name}: Je ne comprends pas....")

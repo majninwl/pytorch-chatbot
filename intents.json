@@ -32,68 +32,73 @@
       "responses": ["Heureux d'aider !", "N'importe quand !", "avec plaisir !"]
     },
     {
-      "tag": "role-service_déclaration",
-      "patterns": ["Quelle utilité apporte le service de la gestion de la déclaration ?",
-                    "quel est le role de service de la gestion de la declaration sommaire ?",
-                    "peux-tu me clarifier le fonctionnement de service de la gestion des déclaration? "],
-      "responses": ["Dans le cadre du partenariat entre l’Autorité portuaire Tanger Med et l’ADII, le service de gestion de la déclaration sommaire a été ajouté au Port Community system Tanger Med pour permettre le renseignement des déclarations hors pool, pool, dépotage, ETT et leur transmission aux services de l’ADII.  \n\nLe module déployé permet également la génération et la soumission des Bons à délivrer électroniques."]
-    },
-    {
       "tag": "demandeENligne ",
       "patterns": [
-        "comment puis-je effectuer une demande en ligne ou une déclaration sommaire?"
+        "comment puis-je effectuer une demande en ligne ?",
+        "effectuer une demande en ligne"
+
       ],
       "responses": [
         "Afin d’effectuer vos demandes en ligne, Un compte d’accès est requis pour s’authentifier au Port Community System Tanger Med. \n\nPour le module de la déclaration sommaire, ce compte est créé sur la base des accès autorisés par l’ADII : à cet effet, les clients sont invités à procéder aux vérifications nécessaires avec les services de l’ADII avant de procéder à la demande de création de compte. \n\nLa demande de la création des comptes est adressée à l’adresse suivante : \n\n« Helpdesk.PCS@tangermed.ma » \n\nPour ce faire, une équipe dédiée est à votre service pour tout besoin de support et/ou d’assistance joignable par téléphone sur 05 39 33 71 63. "
       ]
     },
     {
-      "tag": "accès et authentification",
+      "tag": "authentification",
       "patterns": [
-        "comment puis-je accéder à la plateforme?",
-        "comment puis-je me connecter à l'application?"
+        "comment s'authentifier à l'application ?",
+        "se connecter",
+        "accés à la plateforme",
+        "s'authentifier"
+
       ],
       "responses": [
         "Pour accéder à la plateforme :\t \n\nTapez le lien https://app.tangermedpcs.ma/ sur votre navigateur et entrez vos coordonnées d’authentification : votre nom d’utilisateur (Username) et le mot de passe (Password). "
       ]
     },
     {
-      "tag": "Ecran d’accueil",
+      "tag": "Accueil",
       "patterns": [
         "que dois-je faire après connexion ?",
-        "l'étape suivante ?"
+        "accueil",
+        "se diriger vers la page d'accueil"
       ],
       "responses": [
         "Une fois connectés, il faudrait cliquer sur l’onglet DS/BAD. \n\nVous serez directement redirigés vers la page d’accueil, qui comporte trois rubriques : « Déclaration », « Consultation » et « Bon à délivrer ». "
       ]
     },
     {
-      "tag": "Déclaration",
+      "tag": "Declaration",
       "patterns": [
+        "peux-tu m'expliquer le fonctionnement de service des déclarations?",
+        "service des déclarations",
+        "declaration"
 
-        "la rubrique déclaration sert à quoi ?"
       ],
       "responses": [
-        "vous pouvez :\n Créer de nouvelles Déclarations sommaires ; \n\nSauvegarder des déclarations en mode brouillon ; \n\nSoumettre les déclarations à l’ADII. "
+        "Dans le cadre du partenariat entre l’Autorité portuaire Tanger Med et l’ADII, le service de gestion de la déclaration sommaire a été ajouté au Port Community system Tanger Med pour permettre le renseignement des déclarations hors pool, pool, dépotage, ETT et leur transmission aux services de l’ADII.  \\n\\nLe module déployé permet également la génération et la soumission des Bons à délivrer électroniques.\"]\n  et à l'aide de la rubrique déclaration vous pouvez :\n Créer de nouvelles Déclarations sommaires ; \n\nSauvegarder des déclarations en mode brouillon ; \n\nSoumettre les déclarations à l’ADII. "
       ]
     },
      {
       "tag": "Consultation",
       "patterns": [
+        "quel est le role de la rubrique Consultation ?",
+        "rubrique Consultation"
 
-        "que peux-je faire avec la rubrique Consultation ?"
 
       ],
       "responses": [
-        "vous pouvez :\n Consulter des Listes Déclarations sommaires créées ainsi que leurs historiques \n\nModifier les déclarations sauvegardées en mode brouillon ; \n\nSoumettre les déclarations à l’ADII.  "
+        "grace à la rubrique consultation vous pouvez:\n Consulter des Listes Déclarations sommaires créées ainsi que leurs historiques \n\nModifier les déclarations sauvegardées en mode brouillon ; \n\nSoumettre les déclarations à l’ADII.  "
       ]
     },
     {
       "tag": "BAD",
       "patterns": [
+        "que peux-je faire avec la rubrique Bons à Délivrer",
+        "BAD",
+        "Bons à Délivrer",
         "que permet la rubrique BAD de faire ?",
-        "que peux-je faire avec la rubrique BAD ?",
-        "la rubrique BAD sert à quoi ?"
+        "que peux-je faire avec la rubrique BAD ?"
+
       ],
       "responses": [
         "Pour les déclarations sommaires créées, vous pouvez : \n\nCréer les bons à délivrer sur la base des connaissements des déclarations sommaires validées par l’ADII ; \n\nSoumettre les bons à délivrer à l’ADII ;  \n\nConsulter les bons à délivrer créées et soumis, ainsi que leurs historiques. \n\n \n\nPour les bons à délivrer qui vous sont destinés (Chargements complets) : \n\nVisualiser les bons à délivrer qui vous sont destinés (une fois validés par l’entité émettrice) ; \n\nSoumettre les bons à délivrer à l’ADII en renseignant le champ du réceptionnaire final ;  \n\nConsulter les bons à délivrer ainsi créées et soumis, ainsi que leurs historiques.  "
@@ -101,33 +106,40 @@
     },
 
     {
-      "tag": "Déclaration sommaire Dépotage",
+      "tag": "Depotage",
       "patterns": [
-        "quelles sont les différentes étapes à suivre pour effectuer une declaration sommaire dépotage ?"
+        "quelles sont les différentes étapes à suivre pour effectuer une declaration sommaire dépotage ?",
+        "declaration sommaire dépotage",
+        "effectuer une declaration sommaire dépotage"
       ],
       "responses": [
         "pour effectuer une declaration sommaire dépotage vous devez passer par deux étapes: 1) informations :\n Cette première étape est commune aux différents types de déclarations sommaires et consiste à renseigner ce qui suit. \n\nLe bureau de la déclaration : \n\nLe bureau de déclaration est automatiquement paramétré comme étant le bureau de Tanger Méditerranée (411). \n\n \n\nLe Type de la DS : \n\nUne liste déroulante s’affiche. L’utilisateur peut choisir entre les valeurs suivantes : \n\n- POOL \n\n- HORS POOL \n\n- POOL – HORS POOL \n\n- DEPOTAGE \n\n- MEAD  \n\n- ETT  \n\nUne fois l’utilisateur choisit la valeur « dépotage » les champs DS Référence et Connaissement Référence sont affichés, Il devra renseigner la référence de la DS de référence et le numéro du connaissement de référence. \n\n \n\nLes autres informations sont ensuite automatiquement téléchargées. \n\n 2) connaissement : La deuxième étape de l’établissement d’une déclaration sommaire « Dépotage» consiste à renseigner les connaissements et leurs lignes de marchandises.\n\n L’utilisateur devra cliquer sur le signe connaissement en haut à droite de son écran. \n\nIl sera alors redirigé vers le tableau des connaissements qui se présente comme le montre la figure ci-dessous. En cliquant sur le bouton « Ajouter connaissement », on obtient l’interface de saisie. La première partie de saisie concerne les informations suivantes : \n\n- la référence : c’est un champ de saisie libre. \n\n- le Lieu de chargement : c’est un champ qui hérite sa valeur du connaissement de référence. \n\n- la Date de Chargement : c’est un champ qui hérite sa valeur du connaissement de référence. \n\n- Le Destinataire : c’est un champ de sélection parmi la liste des sociétés enregistrées au référentiel de l’ADII. La sélection peut se faire en tapant le numéro ICE ou bien la raison sociale. La deuxième partie consiste à l’insertion des lignes de marchandises. En cliquant sur le bouton « Ajouter Ligne », on obtient l'interface de saisie. \n\nL’utilisateur précise ainsi les informations suivantes : \n\n- Le Type Contenants : c’est un champ de sélection parmi une liste téléchargée. \n\n- le Nombre Contenants : c’est un champ numérique de saisie libre. \n\n- La Marque : c’est un champ de saisie libre. \n\n- Le Poids (KG) : c’est un champ numérique de saisie libre. (Attention : il ne s’agit pas de la TARE mais du poids de la marchandise) \n\n- La Nature Marchandise : c’est un champ de saisie libre. \n\n- le Code NGP : c’est un champ numérique à 4 chiffres de saisie libre \n\nSi le type de contenant choisi est Conteneur, Remorque ou Ensemble Routier, l’ajout des informations sur l’équipement est obligatoire.\n\nLes informations sur les équipements sont : \n\n- Le numéro de l’équipement : C’est un champ de saisie libre. \n\n- La Tare en Kilogrammes : C’est un champ numérique de saisie libre. \n\n- la Longueur en mètres : C’est un champ numérique de saisie libre (la longueur est requise pour les types contenant Remorque et ensemble routier. L’utilisateur procède ensuite à la sauvegarde de la ligne, puis à la sauvegarde du connaissement. Une fois la liste des connaissements saisis, l’utilisateur peut vérifier les valeurs cumulées suivantes et qui sont calculées automatiquement : \n\n- Poids brute Total \n\n- Tare Total \n\n- Nombre de contenants \n\nCes valeurs sont affichées en dessous du tableau des connaissements. \n\nVérification des données et mise à jour des informations : \n\nL’utilisateur peut vérifier et mettre à jour les données saisies en cliquant sur le « stylé » au niveau des actions. \n\nSauvegarder la DS \n\nL’utilisateur peut vérifier et mettre à jour les données saisies en cliquant sur le « stylé » au niveau des actions. \n\nIl pourra ensuite compléter et modifier la DS en la retrouvant au niveau de la liste des consultations. \n\nSoumettre la DS. \n\nUne fois le renseignement de la DS est complet : l’utilisateur peut soumettre sa DS en cliquant sur le bouton « Soumettre DS » en bas à gauche de son écran. \n\nCette action se traduit en l’envoi de la DS au système BADR de l’ADII. \n\nL’utilisateur pourra suivre les étapes de traitement de sa DS au niveau de la liste des consultations.  "     ]
     },
      {
       "tag": "Consultation des DS ",
-      "patterns": ["comment puis-je consulter les DS"],
+      "patterns": [
+        "comment puis-je consulter les déclarations sommaire ?",
+        "comment puis-je consulter les DS",
+        "consulter les DS",
+        "consultation des DS"
+      ],
       "responses": ["En cliquant sur la deuxième rubrique « Consultation », l’utilisateur peut faire le suivi et accéder à ses déclarations. "]
     },
     {
       "tag": "modification des DS ",
-      "patterns": ["Dans quel cas la modification des DS est possible ?", "que dois-je faire si je veux corriger une DS?", "commment puis-je continuer le renseignement d'une DS sauvegardée ?"],
+      "patterns": ["Dans quel cas la modification des DS est possible ?","modifier DS","modifier déclaration sommaire", "que dois-je faire si je veux corriger une DS?", "commment puis-je continuer le renseignement d'une DS sauvegardée ?"],
       "responses": [" La modification de la DS est possible tant que les Bons à délivrer ne sont pas soumis à la Douane et tant que le processus Douane ne la bloque pas. \n\nA cet effet, que ce soit pour continuer le renseignement d’une DS sauvegardé ou bien pour corriger une DS suite à un motif de rejet : l’utilisateur peut cliquer sur action et faire le nécessaire.  "]
     },
     {
-      "tag": "Gestion des Bons à délivrer ",
-      "patterns": ["comment puis-je gérer les bons à délivrer Dépotage ?"],
+      "tag": "GestionBAD",
+      "patterns": ["comment gerer les BAD dépotage ?","gestion des bons à délivrer Dépotage", "gestion des BAD"],
       "responses": [
         "La gestion des bons à délivrer est possible au niveau de la troisième rubrique « Bon à Délivrer ». \n\nEn y accédant on retrouve l’écran d’accueil. Des critères permettent de cibler la recherche des Bons à Délivrer : \n\n- Numéro d’escale \n\n- Numéro du connaissement \n\n- Etat du bon à délivrer \n\n- Numéro du manifeste (de la déclaration) \n\n- Numéro du Bon à délivrer \n\n- Type du Bon à délivrer  \n\n- une plage de date \n\n \n\nL’utilisateur peut soit remplir l’un de ces critères, soit cliquer directement sur « rechercher ».\n\nLes bons à délivrer sont créés avec le statut « Nouveau » une fois la déclaration qui comporte leurs connaissements est validée par la Douane. \n\nL’utilisateur doit cliquer sur action pour pouvoir les soumettre. \n\nEn cliquant sur Action, le détail du BAD est affiché.\n\nL’utilisateur devra renseigner le champ réceptionnaire pour pouvoir soumettre le Bon à délivrer. \n\nLe suivi du traitement du BAD est disponible via des Statuts Tanger Med et Douane."
       ]
     },
     {
-      "tag": "Bon à délivrer pour les chargements complets ",
-      "patterns": ["quelle est la procédure que je dois suivre lors de soumission des bon à délivrer?"],
+      "tag": "BADChargementComplet ",
+      "patterns": ["quelle est la procédure que je dois suivre lors de soumission des bon à délivrer?", "soumission des bon à délivrer", "soumission BAD"],
       "responses": [
         "L’utilisateur peut soumettre à la Douane les BAD dont il est Réceptionnaire. \n\nEn effet la Douane procède à la comparaison entre le réceptionnaire du BAD et l’importateur du lot de la marchandise en question. \n\nA cet effet, il faudra tel que décrit ci-dessus :  \n\n- Rechercher le BAD à soumettre ; \n\n- Renseigner le champ Réceptionnaire ; \n\n- Soumettre le BAD \n\n- Suivre l’évolution de son traitement par la Douane (via les statuts)."
           ]
