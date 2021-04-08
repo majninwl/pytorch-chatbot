@@ -143,6 +143,287 @@
       "responses": [
         "L’utilisateur peut soumettre à la Douane les BAD dont il est Réceptionnaire. \n\nEn effet la Douane procède à la comparaison entre le réceptionnaire du BAD et l’importateur du lot de la marchandise en question. \n\nA cet effet, il faudra tel que décrit ci-dessus :  \n\n- Rechercher le BAD à soumettre ; \n\n- Renseigner le champ Réceptionnaire ; \n\n- Soumettre le BAD \n\n- Suivre l’évolution de son traitement par la Douane (via les statuts)."
           ]
+    },
+    {
+      "tag": "plateforme2",
+      "patterns": ["dans quel but vous avez opté pour une nouvelle plateforme en partenariat avec Morocco Foodex?",
+                   "Tanger Med Port Community System-Morocco Foodex",
+                   "Morocco Foodex"],
+      "responses": [
+        "Dans le cadre de la dématérialisation de l’offre de services de Tanger Med à travers l’intégration de diverses solutions dans son portail « Port Community System », une nouvelle plateforme a été mise en place en partenariat avec Morocco Foodex dans le but de faciliter les procédures d’export des produits agroalimentaires."          ]
+    },
+    {
+      "tag": "prerequis",
+      "patterns": [
+        "que dois je avoir pour faire une demande en ligne sur la plateforme Morocco Foodex?",
+        "demande en ligne sur la plateforme Morocco Foodex",
+        "demande en ligne"
+      ],
+      "responses": [
+        "Afin d’effectuer vos demandes en ligne, Un compte d’accès est requis pour s’authentifier au Port Community System, qui vous sera livré par l’Etablissement Autonome de Contrôle et Coordination des Exportations (Morocco Foodex). \nPour ce faire, une équipe dédiée est à votre service pour tout besoin de support et/ou d’assistance joignable par téléphone sur 05 39 33 71 63.\n"
+      ]
+    },
+    {
+      "tag": "Authentification2",
+      "patterns": ["que dois je faire pour accéder à la plateforme Morocco Foodex ?",
+                   "s'authentifier à la plateforme Morocco Foodex",
+                   "authentification",
+                   "se connecter à l'application"],
+      "responses": [
+        "Pour accéder à la plateforme :\t\nTapez le lien https://portail.tangermed.ma/ sur votre navigateur et entrez vos coordonnées d’authentification : votre nom d’utilisateur (Username) et le mot de passe (Password).\n\nLorsque la connexion est établie, vous serez orientés vers une page où vous devez changer votre mot de passe pour les prochaines connexions \n\nSi vous désirez changer votre mot de passe, il suffit de cliquer sur « Mettre à jour le profil »\n\nVous entrez votre mot de passe actuel puis votre nouveau en deux saisies pour confirmation"]
+    },
+    {
+      "tag": "AccueilLcCc",
+      "patterns": [
+        "que dois-je faire après connexion à la plateforme Morocco Foodex?",
+        "la page d'accueil(Liste de colisage - Certificat de Conformité)"
+      ],
+      "responses": [
+        "Une fois connectés, vous serez directement redirigés vers la page d’accueil de la plateforme, qui comporte deux rubriques : « Liste Colisage » et « Certificat Conformité ». "
+      ]
+    },
+    {
+      "tag": "rubriqueLC",
+      "patterns": [
+        "que permet la rubrique Liste Colisage de faire?",
+        "Liste Colisage",
+        "la rubrique liste colisage"
+      ],
+      "responses": [
+        "•\tla rubrique Liste Colisage permet de  :\n-\tRechercher les listes déjà crées selon plusieurs critères de recherche : Référence liste colisage, Exportateur, Statut, Date de création, Marché, Destination, Point d’embarquement, Point de débarquement et le nombre max des lignes à afficher ;\n-\tCréer des nouvelles Listes de Colisage ;\n-\tConsulter des Listes de Colisage, en appuyant sur « Détails ».\n "
+      ]
+    },
+    {
+      "tag": "rubriqueCC",
+      "patterns": ["à quoi sert la rubrique certificat conformité?", "certificat conformité", "la rubrique certificat conformité"
+      ],
+      "responses": [
+        "•\tla rubrique Certifcat Conformité permet de  : \n-\tRechercher les Certificats de Conformité déjà crées selon plusieurs critères de recherche : Référence, Exportateur, Statut, Date de création, Destination, Point d’embarquement, Point de débarquement et le nombre max des lignes à afficher ;\n-\tCréer des nouveaux Certificats de Conformité ;\n-\tConsulter des Certificats de Conformité, en appuyant sur « Détails ». \n"
+      ]
+    },
+    {
+      "tag": "creationListeColisage",
+      "patterns": [
+        "comment créer une liste de colisage ?",
+        "créer une liste de colisage ",
+        "inserer une liste de colisage",
+        "ajouter une liste de colisage"
+      ],
+      "responses": [
+        "Pour créer une liste de colisage, vous appuyez sur le bouton « Créer liste de colisage »\n Ensuite vous renseignez les différents champs liés à la liste de colisage :\n\nChamps obligatoires :\n-\tExportateur\n-\tMoyen de transport\n-\tMarché\n-\tDestination\n-\tPoint d’embarquement\n-\tPoint de débarquement\n-\tProduit\n\n\nChamps facultatifs :\n-\tDestinataire\n-\tTransitaire\n-\tNombre total de palettes\n\nne fois les champs sont remplis, vous pouvez soumettre, sauvegarder la liste de colisage ou retourner à la page précédente et annuler la création."
+      ]
+    },
+    {
+      "tag": "insertionProduit",
+      "patterns": [
+        "comment insérer de nouveaux produits à la liste de colisage?",
+        "insérer de nouveaux produits à la liste de colisage "
+      ],
+      "responses": [
+        "Pour insérer de nouveaux produits à la liste de colisage, vous cliquez sur « Ajouter produit » (possibilité d’ajouter plusieurs lignes produit).\n\nChamps Obligatoires :\n-\tProduit\n-\tType Emballage primaire\n-\tUnité de mesure Emballage primaire\n-\tTaille Emballage primaire\n-\tNombre total Emballage primaire\n-\tPoids brut (en KG)\n-\tPoids net (en KG)\n-\tPoids égoutté (en KG)\n\n\nChamps facultatifs :\n\n-\tVariété et/ou Description\n-\tLot/Journée de fabrication\n-\tProducteur \n-\tCalibre\n-\tType calibre\n-\tCatégorie\n-\tMarque\n-\tType Emballage unitaire\n-\tUnité de mesure Emballage unitaire\n-\tTaille Emballage unitaire\n-\tNombre Emballage unitaire\n-\tType Préemballage\n-\tUnité de mesure Préemballage\n-\tTaille Préemballage\n-\tNombre Préemballage\n"
+      ]
+    },
+    {
+      "tag": "suppressionProduit",
+      "patterns": [
+        "comment supprimer un produit ?",
+        "supprimer une ligne produit ",
+        "supprimer un produit"
+      ],
+      "responses": [
+        "Si vous souhaitez supprimer une ligne produit, vous cliquez sur le bouton « Remove »."
+      ]
+    },
+    {
+      "tag": "SauvegardeListeColisage ",
+      "patterns": [
+        "Est ce que je peux modifier ou supprimer la liste de colisage aprés sauvegarde?",
+        "possibilité de supprimer la liste de colisage",
+        "possibilité de modifier de la liste de colisage",
+        "possibilité de modifier ou supprimer la liste de colisage"
+      ],
+      "responses": [
+        "Quand vous sauvegardez votre liste de colisage, elle prend le statut « Sauvegardée » et peut être modifiée ou supprimée "
+      ]
+    },
+    {
+      "tag": "SuppressionlisteColisage ",
+      "patterns": [
+        "comment supprimer une liste de colisage?",
+        "suppression de la liste de colisage",
+        "supprimer la liste de colisage"
+      ],
+      "responses": [
+        "Il suffit de cliquer sur le bouton « Delete » pour supprimer une liste de colisage indésirable "
+      ]
+    },
+    {
+      "tag": "SoumissionListeColisage",
+      "patterns": [
+        "que se passe-t-il aprés soumission de la liste de colisage?",
+        "soumission de la liste de colisage"
+      ],
+      "responses": [
+        "Lorsque vous soumettez la liste de colisage, le système affecte par défaut une référence à la liste créée qui comporte : l’année de création/ Code de la délégation de contrôle correspondante/ N° de série ; exemple : 2020/14/000033\n\nEn cliquant au-dessous vous serez redirigé vers l’interface contenant les listes de colisage crées.\n\nUne fois vous soumettez la liste de colisage, elle passe en statut « Soumise » et sera envoyée à la délégation de contrôle correspondante pour validation.  \nEnsuite, la délégation de contrôle peut soit rejeter ou valider la liste de colisage :\n\uF0A7\tStatut « Validée » (le cas de conformité du LC) \n\uF0A7\tStatut « Rejetée » (le cas de non-conformité du LC)\n"
+      ]
+    },
+    {
+      "tag": "creationCC",
+      "patterns": [
+        "comment creer un certificat de conformité?",
+        "creer un certificat de conformité",
+        "creation du certificat de conformité"
+      ],
+      "responses": [
+        "Pour créer un certificat de conformité, vous cliquez sur le bouton « Créer certificat de conformité »\n\nPar la suite, vous cherchez la liste de colisage ciblée, selon plusieurs critères :\nRéférence LC, Exportateur, Date de création, Point d’embarquement, Point de débarquement, Destination et le nombre maximum de résultats à afficher, puis vous lancez votre recherche grâce au bouton « Rechercher » \n\nEnsuite, pour vous choisissez votre liste de colisage en appuyant sur « Sélectionner » \nPar la suite, vous cochez les lignes produits qui vous intéressent et vous appuyez sur « Mettre à jour CC »\n\nEnsuite, vous remplissez les champs suivants : Champs obligatoires :\n-\tImmatriculation\n-\tNombre d’emballages primaires\n-\tPoids net (en KG)\n\nChamps facultatifs :\n-\tBureau de douane prévu\n\nSi vous souhaitez supprimer une ligne produit, vous cliquer sur « Remove ».\n\nUne fois les champs sont remplis, vous pouvez soumettre, sauvegarder le certificat de conformité ou retourner à la page précédente et annuler la création, ou bien vous cliquez sur « Sélectionner » dans le cas d’un Certificat de Conformité demandé à  la base de plusieurs Listes de colisage.\n\nEnsuite vous pouvez : soumettre, sauvegarder ou annuler la création."
+      ]
+    },
+    {
+      "tag": "SauvegardeCC",
+      "patterns": [
+        "Est ce que je peux modifier ou supprimer le certificat de conformité aprés sauvegarde?",
+        "possibilité de supprimer le certificat de conformité",
+        "possibilité de modifier le certificat de conformité",
+        "possibilité de modifier ou supprimer le certificat de conformité"
+      ],
+      "responses": [
+        "Une fois vous sauvegardez votre Certificat de Conformité, elle prendra le statut « Sauvegardé » et peut être modifié ou supprimé \n\nEn allant sur « Détails » vous aurez un aperçu sur le certificat crée "
+      ]
+    },
+    {
+      "tag": "SuppressionCC",
+      "patterns": [
+        "comment supprimer un certificat de conformité?",
+        "supprimer un certificat de conformité",
+        "suppression d'un certificat de conformité"
+      ],
+      "responses": [
+        "Afin de supprimer un Certificat de conformité, veuillez appuyer sur « Delete »"
+      ]
+    },
+    {
+      "tag": "soumissionCC",
+      "patterns": [
+        "que se passe-t-il aprés soumission de certificat de conformité?",
+        "soumettre le certificat de conformité",
+        "soumission de certificat de conformité"
+      ],
+      "responses": [
+        "Lorsque vous soumettez le Certificat de Conformité, le système affecte par défaut une référence au certificat crée qui comporte : l’année de création/ Code de la délégation de contrôle correspondante/ N° de série ; exemple : 2020/14/0000014\n\nEn cliquant au-dessous         vous serez redirigé vers l’interface contenant les Certificats de Conformité crées.\n\nUne fois vous soumettez le Certificat de Conformité, il passe en statut « Soumis » et sera envoyé à la délégation de contrôle correspondante pour validation.  \nEnsuite, la délégation de contrôle peut soit rejeter ou valider le Certificat de Conformité :\n\uF0A7\tStatut « Validé » (le cas de conformité du CC) \n\uF0A7\tStatut « Rejeté » (le cas de non-conformité du CC)\n"
+      ]
+    },
+    {
+      "tag": "TelechargementCC",
+      "patterns": [
+        "comment puis-je télécharger le certificat de conformité?",
+        "telecharger le certificat de conformité",
+        "telechrgement du certificat de conformité",
+        "imprimer le certificat de conformité"
+      ],
+      "responses": [
+        "Vous pouvez télécharger le certificat de conformité en appuyant sur logo « PDF » "
+      ]
+    },
+    {
+      "tag": "AccueilCertificatInspection)",
+      "patterns": [
+        "comment puis-je accéder aux certificats d'inspection?",
+        "certificat d'inspection"
+      ],
+      "responses": [
+        "Une fois connectés, vous serez directement redirigés vers la page d’accueil de la plateforme, dans laquelle vous pouvez :\n-\tRechercher les Certificats d’inspection déjà crées selon plusieurs critères de recherche : Référence, Infrastructure, Statut, Date de création, Destination, Point d’embarquement, Point de débarquement, le nombre max des lignes à afficher et par Déclaration unique de marchandise (en appuyant sur Choisir DUM) ;\n-\tCréer de nouveaux Certificats d’inspection ;\n-\tConsulter des Certificats d’inspection, en appuyant sur « Détails ».\n-\tTélécharger un Certificat d’inspection. \n-\tConsulter les demandes de Renvoi des Certificats d’inspection.\n"
+      ]
+    },
+    {
+      "tag": "CreationCertificatInspection",
+      "patterns": [
+        "comment créer un certificat d'inspection?",
+        "creer un certificat d'inspection",
+        "création d'un certificat d'inspection"
+      ],
+      "responses": [
+        "Afin de créer un Certificat d’inspection, appuyez sur le bouton « Créer certificat d’inspection »\t\nPar la suite, pour choisir une liste de colisage, vous cliquez sur « Sélectionner »\nAprès avoir choisi votre liste de colisage, vous serez redirigé vers une page où vous devez remplir les champs liés au Certificat d’inspection :\n\nChamps obligatoires :\n-\tDéclaration unique de marchandise (Choisir DUM)\n-\tImmatriculations\n-\tNombre d’Emballage primaire\n-\tPoids brut (en KG)\n-\tPoids net (en KG)\n-\tPoids égoutté (en KG)\n-\tValeur\n-\tFacture\n\n\nChamps facultatifs :\n-\tNombre total de palettes\n-\tCertificats phytosanitaires (Choisir CP)\n-\tSanitaire\n-\tPhytosanitaire\n-\tAutre\n"
+      ]
+    },
+    {
+      "tag": "ChoixdeDUM ",
+      "patterns": [
+        "comment séléctionner la déclaration unique de marchandises?",
+        "La sélection de Déclaration Unique de Marchandises",
+        "choix de Déclaration Unique de Marchandises",
+        "sélectionner de Déclaration Unique de Marchandises",
+        "choisir de Déclaration Unique de Marchandises",
+        "choisir DUM"
+      ],
+      "responses": [
+        "La sélection de Déclaration Unique de Marchandises s’effectue en cliquant sur la rubrique « Choisir DUM » pour choisir la DUM et puis sur « Sélectionner »"
+      ]
+    },
+    {
+      "tag": "ChoixCP",
+      "patterns": [
+        "comment ajouter un Certificat Phytosanitaire?",
+        "Choix de CP",
+        "CP",
+        "Certificat Phytosanitaire"
+      ],
+      "responses": [
+        "Vous pouvez ajouter le Certificat Phytosanitaire en appuyant sur « Choisir CP », ensuite vous cochez un ou plusieurs CP et vous cliquez sur « Ajouter au CI » "
+      ]
+    },
+    {
+      "tag": "FinDeCreationDuCI ",
+      "patterns": [
+        "quelle est la procédure pour finaliser la création du certificat d'inspection?",
+        "finaliser la creation du certificat d'inspection "
+      ],
+      "responses": [
+        "Une fois vous insérez la DUM et le CP (si c’est le cas), vous pouvez ajouter au moins une immatriculation à votre demande en cliquant sur « Ajouter »\n\nVous pouvez ainsi supprimer une immatriculation en appuyant sur « Remove »\n\nJuste après, vous renseignez les autres champs de la partie « Produits »\n\nNB : n’oubliez pas de choisir le code article Douane correspondant au produit du certificat d’inspection.\nEt pour supprimer une ligne produit de la liste, il suffit de cliquer sur « Supprimer Produit »\n\nEnfin vous joignez vos documents dans la rubrique « Ajouter/ Remplacer des documents » en appuyant sur « Choisir un fichier » \n\nEnsuite vous pouvez sauvegarder, soumettre ou annuler la création du Certificat d’inspection "
+      ]
+    },
+    {
+      "tag": "SauvegardeCertificatInspection ",
+      "patterns": [
+        "est ce que le certificat d'inspection peut etre modifié ou supprimé aprés sauvegarde?",
+        "possibilité de modifier le certificat d'inspection ",
+        "possibilité de modifier le certificat d'inspection "
+      ],
+      "responses": [
+        "Après la sauvegarde du Certificat d’inspection, il prendra par défaut le statut « Sauvegardé » et peut être modifié ou supprimé "
+      ]
+    },
+    {
+      "tag": "SuppressionDuCertificatInspection ",
+      "patterns": [
+        "comment supprimer un certificat d'inspection?",
+        "supprimer un certificat d'inspection",
+        "suppression un certificat d'inspection"
+      ],
+      "responses": [
+        "Un certificat d’inspection peut être supprimé avant sa soumission, en cliquant sur « Delete »"
+      ]
+    },
+    {
+      "tag": "SoumissionDuCertificatInspection ",
+      "patterns": [
+        "Que se passe-t-il aprés soumission du certificat d'inspection?",
+        "soumission du certificat d'inspection",
+        "soumettre le certificat d'inspection"
+      ],
+      "responses": [
+        "a.\tCas n°1 : DUM avec une seule version\nLorsque vous soumettez le Certificat d’inspection, le système affecte par défaut une référence au certificat crée qui comporte : \n-\tL’Année de création/ Code de la délégation de contrôle du point d’embarquement/ N° de série/ PROV dont la DUM est Provisionnelle ; exemple : 2020/06/0000028/PROV\n\n-\tL’Année de création/ Code de la délégation de contrôle du point d’embarquement/ N° de série pour le cas d’une DUM de type « Normale » ; exemple : 2020/06/0000028\nEn cliquant au-dessous         vous serez redirigé vers l’interface contenant les Certificats d’inscription crées.  \n \n\nb.\tCas n°2 :  DUM avec plusieurs versions\n\nDans le cas où une nouvelle version de DUM a été générée, vous serez redirigé vers une page contenant les certificats d’inspection dont la version DUM est antérieure.\n•\tSi le Certificat d’inspection est soumis, vous faites le rappel par vous-même en appuyant sur « Renvoi CI » et vous pouvez ensuite le modifier.\n•\tSi le Certificat d’inspection est validé, vous cliquez sur « Demande Renvoi CI » et vous attendez la validation de l’Agent Foodex pour que le CI soit modifiable.\n\nVous pouvez consulter l’état de vos demandes de renvoi des CIs dans la rubrique « Liste Demandes de Rappel ».\n"
+      ]
+    },
+    {
+      "tag": "telechargementDeCI",
+      "patterns": [
+        "comment télécharger le certificat d'inspection?",
+        "télécharger le certificat d'inspection",
+        "imprimer le certificat d'inspection"
+      ],
+      "responses": [
+        "Finalement, le certificat est prêt à imprimer dans le cas où son statut est « validé », il suffit de cliquer sur le logo « PDF » "
+      ]
     }
   ]
 }
