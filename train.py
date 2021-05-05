@@ -3,13 +3,20 @@ import random
 import json
 import torch
 import torch.nn as nn
+import torchvision
+import torchvision.transforms as transforms
 from torch.utils.data import Dataset, DataLoader
 
+
 from nltk_utils import bag_of_words, tokenize, stem
-from model import NeuralNet
+from model import RNN
+
+import io
+
+
 
 # read json file
-with open('intents.json', 'r') as f:
+with io.open('intents.json', 'r', encoding='utf8') as f:
     intents = json.load(f)
 
 all_words = []
@@ -54,12 +61,16 @@ X_train = np.array(X_train)
 y_train = np.array(y_train)
 
 # Hyper-parameters
+num_classes = 61
 num_epochs = 1000
-batch_size = 8
+batch_size = 1
 learning_rate = 0.001
+
 input_size = len(X_train[0])
 hidden_size = 8
 output_size = len(tags)
+num_layers = 2
+sequence_length = 28
 print(input_size, output_size)
 
 
@@ -87,22 +98,23 @@ train_loader = DataLoader(dataset=dataset,
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-model = NeuralNet(input_size, hidden_size, output_size).to(device)
+model = RNN(input_size, hidden_size, num_layers, num_classes).to(device)
 
 # Loss and optimizer
 criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
 # Train the model
+total_step = len(train_loader)
 for epoch in range(num_epochs):
-    for (words, labels) in train_loader:
-        words = words.to(device)
+    for i, (words, labels) in enumerate(train_loader):
+        words = words.reshape(-1, sequence_length, input_size).to(device)
         labels = labels.to(dtype=torch.long).to(device)
 
         # Forward pass
         outputs = model(words)
         # if y would be one-hot, we must apply
-        # labels = torch.max(labels, 1)[1]
+        #labels = torch.max(labels, 1)[1]
         loss = criterion(outputs, labels)
 
         # Backward and optimize
@@ -110,7 +122,7 @@ for epoch in range(num_epochs):
         loss.backward()
         optimizer.step()
 
-    if (epoch + 1) % 100 == 0:
+    if (i + 1) % 100 == 0:
         print (f'Epoch [{epoch + 1}/{num_epochs}], Loss: {loss.item():.4f}')
 
 print(f'final loss: {loss.item():.4f}')
@@ -121,7 +133,9 @@ data = {
     "hidden_size": hidden_size,
     "output_size": output_size,
     "all_words": all_words,
-    "tags": tags
+    "tags": tags,
+    "num_classes": num_classes,
+    "num_layers": num_layers
 }
 
 FILE = "data.pth"
