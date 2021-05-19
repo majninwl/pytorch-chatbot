@@ -9,7 +9,7 @@ from nltk_utils import bag_of_words, tokenize
 #from spacy_utils import bag_of_words, return_token
 import io
 
-#from spellchecker import SpellChecker
+from spellchecker import SpellChecker
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -46,19 +46,20 @@ while True:
 
     sentence = tokenize(sentence)
 
-    #spell = SpellChecker(language='fr')
+    spell = SpellChecker(language='fr')
 
-    #corrected = []
-    #for word in sentence:
-        #corrected.append(spell.correction(word))
-        #sentence = corrected
+    corrected = []
+    for word in sentence:
+        corrected.append(spell.correction(word))
+        sentence = corrected
 
     #sentence = return_token(sentence)
     X = bag_of_words(sentence, all_words)
-    X = X.reshape(1, X.shape[0])
+    X = X.reshape(-1, 1, 212)
     X = torch.from_numpy(X).to(device)
 
     output = model(X)
+
     _, predicted = torch.max(output, dim=1)
     _, predictions = torch.sort(output, dim=1, descending=True)
 

@@ -63,14 +63,14 @@ y_train = np.array(y_train)
 # Hyper-parameters
 num_classes = 61
 num_epochs = 1000
-batch_size = 1
+batch_size = 2
 learning_rate = 0.001
 
 input_size = len(X_train[0])
 hidden_size = 8
 output_size = len(tags)
 num_layers = 2
-sequence_length = 28
+sequence_length = 1
 print(input_size, output_size)
 
 
@@ -108,7 +108,9 @@ optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 total_step = len(train_loader)
 for epoch in range(num_epochs):
     for i, (words, labels) in enumerate(train_loader):
+        #words.shape
         words = words.reshape(-1, sequence_length, input_size).to(device)
+
         labels = labels.to(dtype=torch.long).to(device)
 
         # Forward pass

@@ -1,68 +1,62 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, session
 import io
 import json
 import random
 import chat
 
 app = Flask(__name__)
+app.secret_key = 'abc'
 
-first_tag = ""
-second_tag = ""
-bot_name = "TANGER MED Bot"
-first_sug_is_correct = True
 
 @app.route("/", methods=['GET'])
-def index():
-    global first_tag
-    global second_tag
-    
-    user_input = request.json['user_input']
-    list = chat.chatbot(user_input)
-    first_tag = str(list[0])
-    second_tag = str(list[1])
-    first_suggestion = str(list[2])
-
-    return jsonify({'response': first_suggestion})
-
-
-@app.route("/", methods=['POST'])
 def chat_response():
-    global first_sug_is_correct
+    user_input = request.json['user_input']
 
-    with io.open('intents.json', 'r', encoding='utf8') as json_data:
-        intents = json.load(json_data)
+    if (user_input not in ['oui', 'non']):
+        list = chat.chatbot(user_input)
 
-    response = ""
-    second_suggestion = ""
+        session['first_tag'] = str(list[0])
+        session['second_tag'] = str(list[1])
 
-    yes_or_no = request.json['user_input']
-    
-    if yes_or_no == 'oui' and first_sug_is_correct:
+        first_suggestion = str(list[2])
+
+        session['first_sug_is_correct'] = True
+
+        return jsonify({'response': first_suggestion})
+
+    else:
+
+        first_response = ""
+        second_response = ""
+        second_suggestion = ""
+
+        with io.open('intents.json', 'r', encoding='utf8') as json_data:
+            intents = json.load(json_data)
+
         for intent in intents['intents']:
-            if first_tag == intent["tag"]:
-                response = str(f"{bot_name}: {random.choice(intent['responses'])}")
-                return jsonify({'response': response})
+            if session['first_tag'] == intent["tag"]:
+                first_response = str(f"{random.choice(intent['responses'])}")
+            if session['second_tag'] == intent["tag"]:
+                second_suggestion = str(f"Voulez-vous dire: {intent['patterns'][0]}")
+                second_response = str(f"{random.choice(intent['responses'])}")
 
-    if yes_or_no == 'non' and first_sug_is_correct:
-        first_sug_is_correct = False
-        for intent in intents['intents']:
-            if second_tag == intent["tag"]:
-                second_suggestion = str(f"{bot_name}: Voulez-vous dire: {intent['patterns'][0]}")
-                return jsonify({'response': second_suggestion})
-    
-    if yes_or_no == 'oui' and not first_sug_is_correct:
-        for intent in intents['intents']:
-            if second_tag == intent["tag"]:
-                response = str(f"{bot_name}: {random.choice(intent['responses'])}")
-                return jsonify({'response': response})
+        yes_or_no = request.json['user_input']
 
-    if yes_or_no == 'non' and not first_sug_is_correct:
-        first_sug_is_correct = True
-        return jsonify({'response': 'Veuillez reformuler votre question'})
+        if yes_or_no == 'oui' and session['first_sug_is_correct']:
+            session['first_sug_is_correct'] = True
+            return jsonify({'response': first_response})
 
-    return jsonify({'response': 'Je ne comprends pas'})
+        if yes_or_no == 'non' and session['first_sug_is_correct']:
+            session['first_sug_is_correct'] = False
+            return jsonify({'response': second_suggestion})
 
+        if yes_or_no == 'oui' and not session['first_sug_is_correct']:
+            session['first_sug_is_correct'] = True
+            return jsonify({'response': second_response})
 
+        if yes_or_no == 'non' and not session['first_sug_is_correct']:
+            session['first_sug_is_correct'] = True
+            return jsonify({'response': 'Veuillez reformuler votre question'})
 
 
 if __name__ == '__main__':
