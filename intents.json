@@ -49,8 +49,8 @@
       "patterns": [
         "comment s'authentifier à la plateforme https://app.tangermedpcs.ma/?",
         "se connecter",
-        "accés à la plateforme",
-        "s'authentifier"
+        "accés à la plateforme"
+
 
       ],
       "responses": [
@@ -95,7 +95,7 @@
     {
       "tag": "BAD",
       "patterns": [
-        "que peux-je faire avec la rubrique Bons à Délivrer",
+        "que peux-je faire avec la rubrique Bons à Délivrer ?",
         "BAD",
         "Bons à Délivrer",
         "que permet la rubrique BAD de faire ?",
@@ -109,7 +109,11 @@
 
     {
       "tag": "Depotage",
-      "patterns": ["quelles sont les différentes étapes à suivre pour effectuer une declaration sommaire dépotage ?", "declaration sommaire dépotage", "effectuer une declaration sommaire dépotage", "DS dépotage"
+      "patterns": [
+        "quelles sont les différentes étapes à suivre pour effectuer une declaration sommaire dépotage ?",
+        "declaration sommaire dépotage",
+        "effectuer une declaration sommaire dépotage",
+        "DS depotage"
       ],
       "responses": [
         "pour effectuer une declaration sommaire dépotage vous devez passer par deux étapes: 1) informations :\n Cette première étape est commune aux différents types de déclarations sommaires et consiste à renseigner ce qui suit. \n\nLe bureau de la déclaration : \n\nLe bureau de déclaration est automatiquement paramétré comme étant le bureau de Tanger Méditerranée (411). \n\n \n\nLe Type de la DS : \n\nUne liste déroulante s’affiche. L’utilisateur peut choisir entre les valeurs suivantes : \n\n- POOL \n\n- HORS POOL \n\n- POOL – HORS POOL \n\n- DEPOTAGE \n\n- MEAD  \n\n- ETT  \n\nUne fois l’utilisateur choisit la valeur « dépotage » les champs DS Référence et Connaissement Référence sont affichés, Il devra renseigner la référence de la DS de référence et le numéro du connaissement de référence. \n\n \n\nLes autres informations sont ensuite automatiquement téléchargées. \n\n 2) connaissement : La deuxième étape de l’établissement d’une déclaration sommaire « Dépotage» consiste à renseigner les connaissements et leurs lignes de marchandises.\n\n L’utilisateur devra cliquer sur le signe connaissement en haut à droite de son écran. \n\nIl sera alors redirigé vers le tableau des connaissements qui se présente comme le montre la figure ci-dessous. En cliquant sur le bouton « Ajouter connaissement », on obtient l’interface de saisie. La première partie de saisie concerne les informations suivantes : \n\n- la référence : c’est un champ de saisie libre. \n\n- le Lieu de chargement : c’est un champ qui hérite sa valeur du connaissement de référence. \n\n- la Date de Chargement : c’est un champ qui hérite sa valeur du connaissement de référence. \n\n- Le Destinataire : c’est un champ de sélection parmi la liste des sociétés enregistrées au référentiel de l’ADII. La sélection peut se faire en tapant le numéro ICE ou bien la raison sociale. La deuxième partie consiste à l’insertion des lignes de marchandises. En cliquant sur le bouton « Ajouter Ligne », on obtient l'interface de saisie. \n\nL’utilisateur précise ainsi les informations suivantes : \n\n- Le Type Contenants : c’est un champ de sélection parmi une liste téléchargée. \n\n- le Nombre Contenants : c’est un champ numérique de saisie libre. \n\n- La Marque : c’est un champ de saisie libre. \n\n- Le Poids (KG) : c’est un champ numérique de saisie libre. (Attention : il ne s’agit pas de la TARE mais du poids de la marchandise) \n\n- La Nature Marchandise : c’est un champ de saisie libre. \n\n- le Code NGP : c’est un champ numérique à 4 chiffres de saisie libre \n\nSi le type de contenant choisi est Conteneur, Remorque ou Ensemble Routier, l’ajout des informations sur l’équipement est obligatoire.\n\nLes informations sur les équipements sont : \n\n- Le numéro de l’équipement : C’est un champ de saisie libre. \n\n- La Tare en Kilogrammes : C’est un champ numérique de saisie libre. \n\n- la Longueur en mètres : C’est un champ numérique de saisie libre (la longueur est requise pour les types contenant Remorque et ensemble routier. L’utilisateur procède ensuite à la sauvegarde de la ligne, puis à la sauvegarde du connaissement. Une fois la liste des connaissements saisis, l’utilisateur peut vérifier les valeurs cumulées suivantes et qui sont calculées automatiquement : \n\n- Poids brute Total \n\n- Tare Total \n\n- Nombre de contenants \n\nCes valeurs sont affichées en dessous du tableau des connaissements. \n\nVérification des données et mise à jour des informations : \n\nL’utilisateur peut vérifier et mettre à jour les données saisies en cliquant sur le « stylé » au niveau des actions. \n\nSauvegarder la DS \n\nL’utilisateur peut vérifier et mettre à jour les données saisies en cliquant sur le « stylé » au niveau des actions. \n\nIl pourra ensuite compléter et modifier la DS en la retrouvant au niveau de la liste des consultations. \n\nSoumettre la DS. \n\nUne fois le renseignement de la DS est complet : l’utilisateur peut soumettre sa DS en cliquant sur le bouton « Soumettre DS » en bas à gauche de son écran. \n\nCette action se traduit en l’envoi de la DS au système BADR de l’ADII. \n\nL’utilisateur pourra suivre les étapes de traitement de sa DS au niveau de la liste des consultations.  "     ]
@@ -117,7 +121,7 @@
      {
       "tag": "Consultation des DS ",
       "patterns": [
-        "comment puis-je consulter les déclarations sommaire ?",
+        "comment puis-je consulter les déclarations sommaires ?",
         "comment puis-je consulter les DS",
         "consulter les DS",
         "consultation des DS"
@@ -126,26 +130,37 @@
     },
     {
       "tag": "modification des DS ",
-      "patterns": ["Dans quel cas la modification des DS est possible ?","modifier DS","modifier déclaration sommaire", "que dois-je faire si je veux corriger une DS?", "commment puis-je continuer le renseignement d'une DS sauvegardée ?"],
+      "patterns": [
+        "Dans quel cas la modification des DS est possible ?",
+        "modifier DS","modifier la déclaration sommaire",
+        "que dois-je faire si je veux corriger une DS?",
+        "commment puis-je continuer le renseignement d'une DS sauvegardée ?"],
       "responses": [" La modification de la DS est possible tant que les Bons à délivrer ne sont pas soumis à la Douane et tant que le processus Douane ne la bloque pas. \n\nA cet effet, que ce soit pour continuer le renseignement d’une DS sauvegardé ou bien pour corriger une DS suite à un motif de rejet : l’utilisateur peut cliquer sur action et faire le nécessaire.  "]
     },
     {
       "tag": "GestionBAD",
-      "patterns": ["comment gerer les BAD dépotage ?","gestion des bons à délivrer Dépotage", "gestion des BAD"],
+      "patterns": [
+        "comment gerer les BAD dépotage ?",
+        "gestion des bons à délivrer Dépotage",
+        "gestion des BAD"],
       "responses": [
         "La gestion des bons à délivrer est possible au niveau de la troisième rubrique « Bon à Délivrer ». \n\nEn y accédant on retrouve l’écran d’accueil. Des critères permettent de cibler la recherche des Bons à Délivrer : \n\n- Numéro d’escale \n\n- Numéro du connaissement \n\n- Etat du bon à délivrer \n\n- Numéro du manifeste (de la déclaration) \n\n- Numéro du Bon à délivrer \n\n- Type du Bon à délivrer  \n\n- une plage de date \n\n \n\nL’utilisateur peut soit remplir l’un de ces critères, soit cliquer directement sur « rechercher ».\n\nLes bons à délivrer sont créés avec le statut « Nouveau » une fois la déclaration qui comporte leurs connaissements est validée par la Douane. \n\nL’utilisateur doit cliquer sur action pour pouvoir les soumettre. \n\nEn cliquant sur Action, le détail du BAD est affiché.\n\nL’utilisateur devra renseigner le champ réceptionnaire pour pouvoir soumettre le Bon à délivrer. \n\nLe suivi du traitement du BAD est disponible via des Statuts Tanger Med et Douane."
       ]
     },
     {
       "tag": "BADChargementComplet ",
-      "patterns": ["quelle est la procédure que je dois suivre lors de soumission des bon à délivrer?", "soumission des bon à délivrer", "soumission BAD"],
+      "patterns": [
+        "quelle est la procédure que je dois suivre lors de soumission des bon à délivrer?",
+        "soumission des bons à délivrer",
+        "soumission BAD"],
       "responses": [
         "L’utilisateur peut soumettre à la Douane les BAD dont il est Réceptionnaire. \n\nEn effet la Douane procède à la comparaison entre le réceptionnaire du BAD et l’importateur du lot de la marchandise en question. \n\nA cet effet, il faudra tel que décrit ci-dessus :  \n\n- Rechercher le BAD à soumettre ; \n\n- Renseigner le champ Réceptionnaire ; \n\n- Soumettre le BAD \n\n- Suivre l’évolution de son traitement par la Douane (via les statuts)."
           ]
     },
     {
       "tag": "Demande AMPE/AMPI ",
-      "patterns": ["Comment soumettre les demandes des AMPE/AMPI ?",
+      "patterns": [
+        "Comment soumettre les demandes des AMPE/AMPI ?",
         "demande AMP",
         "demande AMPE",
         "demande AMPI"],
@@ -155,7 +170,8 @@
     },
     {
       "tag": "DUM",
-      "patterns": ["Que signifie DUM ?",
+      "patterns": [
+        "Que signifie DUM ?",
         "Que veut dire DUM ?",
         "signification DUM ?",
         "DUM ?"],
@@ -165,7 +181,8 @@
     },
     {
       "tag": "recherche DUM",
-      "patterns": ["Comment consulter les DUM enregistrées ?",
+      "patterns": [
+        "Comment consulter les DUM enregistrées ?",
         "consulter DUM ?",
         "DUM enregistrée",
         "liste DUM"],
@@ -175,7 +192,8 @@
     },
     {
       "tag": "DUM sens",
-      "patterns": ["Que signifie 'sens' ?",
+      "patterns": [
+        "Que signifie 'sens' ?",
         "Que veut dire sens ?",
         "sens"],
       "responses": [
@@ -184,7 +202,8 @@
     },
     {
       "tag": "DUM remote",
-      "patterns": ["Que signifie 'remote' ?",
+      "patterns": [
+        "Que signifie 'remote' ?",
         "Que veut dire remote ?",
         "remote"],
       "responses": [
@@ -193,7 +212,8 @@
     },
     {
       "tag": "DUM creation",
-      "patterns": ["Je n’arrive pas à retrouver la DUM",
+      "patterns": [
+        "Je n’arrive pas à retrouver la DUM",
         "Je ne trouve pas la DUM",
         "DUM manquante"],
       "responses": [
@@ -202,7 +222,8 @@
     },
     {
       "tag": "DUM modification",
-      "patterns": ["Est-ce que je peux modifier la DUM ?",
+      "patterns": [
+        "Est-ce que je peux modifier la DUM ?",
         "modifier DUM",
         "modification DUM"
         ],
@@ -212,7 +233,8 @@
     },
     {
       "tag": "AMP",
-      "patterns": ["Que signifie AMP ?",
+      "patterns": [
+        "Que signifie AMP ?",
         "Que veut dire AMP ?",
         "signification AMP",
         "AMP"],
@@ -222,7 +244,8 @@
     },
     {
       "tag": "AMP Terminal",
-      "patterns": ["Que signifie 'Terminal' ?",
+      "patterns": [
+        "Que signifie 'Terminal' ?",
         "Que veut dire Terminal ?",
         "signification Terminal",
         "Terminal"],
@@ -232,7 +255,8 @@
     },
     {
       "tag": "NumeroUniteAMP",
-      "patterns": ["Que signifie 'numéro unité' ?",
+      "patterns": [
+        "Que signifie 'numéro unité' ?",
         "Que veut dire numéro unité ?",
         "signification numéro unité",
         "numéro unité"],
@@ -242,37 +266,44 @@
     },
     {
       "tag": "TypeUniteAMP",
-      "patterns": ["Que signifie 'type unité' ?",
+      "patterns": [
+        "Que signifie 'type unité' ?",
         "Que veut dire type unité ?",
         "signification type unité",
-        "type unité"],
+        "type unité"
+      ],
       "responses": [
         "TIR \nConteneur \nConteneur manifesté \nENGIN \nFourgon \nVoiture de tourisme"
           ]
     },
     {
       "tag": "AMP No Tracteur",
-      "patterns": ["Que signifie 'No Tracteur' ?",
+      "patterns": [
+        "Que signifie 'No Tracteur' ?",
         "Que veut dire No Tracteur ?",
         "signification No Tracteur",
-        "No Tracteur"],
+        "No Tracteur"
+      ],
       "responses": [
         "Immatriculation du tracteur. Ce champ n’est pas obligatoire."
           ]
     },
     {
       "tag": "AMP No plateau",
-      "patterns": ["Que signifie 'No plateau' ?",
+      "patterns": [
+        "Que signifie 'No plateau' ?",
         "Que veut dire No plateau ?",
         "signification No plateau",
-        "No plateau"],
+        "No plateau"
+      ],
       "responses": [
         "Numéro du plateau quand il s’agit d’un conteneur."
           ]
     },
     {
       "tag": "detailsAMP",
-      "patterns": ["Est-ce que je peux consulter les détails de mon AMP ?",
+      "patterns": [
+        "Est-ce que je peux consulter les détails de mon AMP ?",
         "consulter détails AMP",
         "consultation détails AMP"
         ],
@@ -282,7 +313,8 @@
     },
     {
       "tag": "AMP liste",
-      "patterns": ["Comment consulter la liste des AMP ?",
+      "patterns": [
+        "Comment consulter la liste des AMP ?",
         "liste AMP"
         ],
       "responses": [
@@ -291,9 +323,10 @@
     },
     {
       "tag": "valideeAMP",
-      "patterns": ["comment récupérer le reçu de dépôt de dossier AMP ?",
-                   "récupérer le reçu de dépôt de dossier AMP",
-                    "le reçu de dépôt de dossier AMP"
+      "patterns": [
+        "comment récupérer le reçu de dépôt de dossier AMP ?",
+        "récupérer le reçu de dépôt de dossier AMP",
+        "le reçu de dépôt de dossier AMP"
         ],
       "responses": [
         "Dans la liste des AMP, Cliquer sur « détail » au niveau du menu « Actions » de l’AMP souhaitée, et puis sur « Imprimer PG » et « Télécharger la page »."
@@ -301,7 +334,8 @@
     },
     {
       "tag": "rejet AMP",
-      "patterns": ["Comment consulter le motif de rejet d’une AMP ?",
+      "patterns": [
+        "Comment consulter le motif de rejet d’une AMP ?",
         "motif de rejet AMP"
         ],
       "responses": [
@@ -310,8 +344,11 @@
     },
     {
       "tag": "demande traction",
-      "patterns": ["Comment créer une demande de traction ?",
-        "demande de traction"
+      "patterns": [
+        "Comment créer une demande de traction ?",
+        "demande de traction",
+        "créer une demande de traction",
+        "création d'une demande de traction"
         ],
       "responses": [
         "Pour créer une demande de traction, deux méthodes sont disponibles : \n1 - la première est de cliquer sur « Ajouter » présente sur le module traction. \nVous devez dans un premier lieu chercher l’AMP, pour laquelle vous voulez demander une traction. \nL’étape suivante est de choisir le type de traction, en cliquant sur « ajouter traction ». \nUne fois le type de traction est choisi, vous cliquez sur « Ajouter » est la commande de traction est créée, vous pouvez la visionnez sur l’écran de recherche. \n2 - La deuxième méthode de création de la traction est à partir de la liste des AMP. Il suffit de cliquer sur « Ajouter Traction » et choisir le type traction et ensuite cliquer sur « Ajouter », et votre commande de traction est créée, avec statut « Brouillon ». Vous pouvez créer des commandes de traction pour vos propres Autorisations de mouvement portuaire même avec un état d’enregistrement « Actif », mais la commande de traction ne sera valide que si l’AMP est valide."
@@ -319,7 +356,8 @@
     },
     {
       "tag": "modifier traction",
-      "patterns": ["Puis-je modifier le type de traction ?",
+      "patterns": [
+        "Puis-je modifier le type de traction ?",
         "modifier traction"
         ],
       "responses": [
@@ -328,8 +366,10 @@
     },
     {
       "tag": "rejet traction",
-      "patterns": ["Comment consulter le motif de rejet d’une traction?",
-        "motif de rejet traction"
+      "patterns": [
+        "Comment consulter le motif de rejet d’une traction?",
+        "motif de rejet traction",
+        "consulter le motif de rejet d'une traction"
         ],
       "responses": [
         "Vous pouvez consultez le motif de rejet sur l’action « Détails »."
@@ -337,7 +377,8 @@
     },
     {
       "tag": "contact",
-      "patterns": ["Contacts utiles",
+      "patterns": [
+        "Contacts utiles",
         "Service des opérations Import/Export",
         "Service Facturation",
         "Service Commercial"
@@ -348,9 +389,10 @@
     },
     {
       "tag": "plateforme2",
-      "patterns": ["dans quel but vous avez opté pour une nouvelle plateforme en partenariat avec Morocco Foodex?",
-                   "Tanger Med Port Community System-Morocco Foodex",
-                   "Morocco Foodex"],
+      "patterns": [
+        "dans quel but vous avez opté pour une nouvelle plateforme en partenariat avec Morocco Foodex?",
+        "Tanger Med Port Community System-Morocco Foodex",
+        "Morocco Foodex"],
       "responses": [
         "Dans le cadre de la dématérialisation de l’offre de services de Tanger Med à travers l’intégration de diverses solutions dans son portail « Port Community System », une nouvelle plateforme a été mise en place en partenariat avec Morocco Foodex dans le but de faciliter les procédures d’export des produits agroalimentaires."          ]
     },
@@ -367,10 +409,11 @@
     },
     {
       "tag": "Authentification2",
-      "patterns": ["que dois je faire pour accéder à la plateforme Morocco Foodex ?",
-                   "s'authentifier à la plateforme Morocco Foodex",
-                   "authentification",
-                   "se connecter à l'application Morocco Foodex"],
+      "patterns": [
+        "que dois je faire pour accéder à la plateforme Morocco Foodex ?",
+        "s'authentifier à la plateforme Morocco Foodex",
+        "authentification",
+        "se connecter à la plateforme Morocco Foodex"],
       "responses": [
         "Pour accéder à la plateforme :\t\nTapez le lien https://portail.tangermed.ma/ sur votre navigateur et entrez vos coordonnées d’authentification : votre nom d’utilisateur (Username) et le mot de passe (Password).\n\nLorsque la connexion est établie, vous serez orientés vers une page où vous devez changer votre mot de passe pour les prochaines connexions \n\nSi vous désirez changer votre mot de passe, il suffit de cliquer sur « Mettre à jour le profil »\n\nVous entrez votre mot de passe actuel puis votre nouveau en deux saisies pour confirmation"]
     },
@@ -388,19 +431,22 @@
       "tag": "rubriqueLC",
       "patterns": [
         "que permet la rubrique Liste Colisage de faire?",
-        "Liste Colisage",
+        "liste colisage",
         "la rubrique liste colisage"
       ],
       "responses": [
-        "•\tla rubrique Liste Colisage permet de  :\n-\tRechercher les listes déjà crées selon plusieurs critères de recherche : Référence liste colisage, Exportateur, Statut, Date de création, Marché, Destination, Point d’embarquement, Point de débarquement et le nombre max des lignes à afficher ;\n-\tCréer des nouvelles Listes de Colisage ;\n-\tConsulter des Listes de Colisage, en appuyant sur « Détails ».\n "
+        "•la rubrique Liste Colisage permet de  :\n-\tRechercher les listes déjà crées selon plusieurs critères de recherche : Référence liste colisage, Exportateur, Statut, Date de création, Marché, Destination, Point d’embarquement, Point de débarquement et le nombre max des lignes à afficher ;\n-\tCréer des nouvelles Listes de Colisage ;\n-\tConsulter des Listes de Colisage, en appuyant sur « Détails ».\n "
       ]
     },
     {
       "tag": "rubriqueCC",
-      "patterns": ["à quoi sert la rubrique certificat conformité?", "certificat conformité", "la rubrique certificat conformité"
+      "patterns": [
+        "à quoi sert la rubrique certificat conformité?",
+        "certificat conformité",
+        "la rubrique certificat conformité"
       ],
       "responses": [
-        "•\tla rubrique Certifcat Conformité permet de  : \n-\tRechercher les Certificats de Conformité déjà crées selon plusieurs critères de recherche : Référence, Exportateur, Statut, Date de création, Destination, Point d’embarquement, Point de débarquement et le nombre max des lignes à afficher ;\n-\tCréer des nouveaux Certificats de Conformité ;\n-\tConsulter des Certificats de Conformité, en appuyant sur « Détails ». \n"
+        "•la rubrique Certifcat Conformité permet de  : \n-\tRechercher les Certificats de Conformité déjà crées selon plusieurs critères de recherche : Référence, Exportateur, Statut, Date de création, Destination, Point d’embarquement, Point de débarquement et le nombre max des lignes à afficher ;\n-\tCréer des nouveaux Certificats de Conformité ;\n-\tConsulter des Certificats de Conformité, en appuyant sur « Détails ». \n"
       ]
     },
     {
@@ -408,7 +454,7 @@
       "patterns": [
         "comment créer une liste de colisage ?",
         "créer une liste de colisage ",
-        "inserer une liste de colisage",
+        "insérer une liste de colisage",
         "ajouter une liste de colisage"
       ],
       "responses": [
@@ -498,7 +544,7 @@
       "patterns": [
         "comment supprimer un certificat de conformité?",
         "supprimer un certificat de conformité",
-        "suppression d'un certificat de conformité"
+        "suppression du certificat de conformité"
       ],
       "responses": [
         "Afin de supprimer un Certificat de conformité, veuillez appuyer sur « Delete »"
@@ -520,7 +566,7 @@
       "patterns": [
         "comment puis-je télécharger le certificat de conformité?",
         "télécharger le certificat de conformité",
-        "téléchrgement du certificat de conformité",
+        "téléchargement du certificat de conformité",
         "imprimer le certificat de conformité"
       ],
       "responses": [
@@ -531,7 +577,7 @@
       "tag": "AccueilCertificatInspection)",
       "patterns": [
         "comment puis-je accéder aux certificats d'inspection?",
-        "certificat d'inspection"
+        "accéder certificat d'inspection"
       ],
       "responses": [
         "Une fois connectés, vous serez directement redirigés vers la page d’accueil de la plateforme, dans laquelle vous pouvez :\n-\tRechercher les Certificats d’inspection déjà crées selon plusieurs critères de recherche : Référence, Infrastructure, Statut, Date de création, Destination, Point d’embarquement, Point de débarquement, le nombre max des lignes à afficher et par Déclaration unique de marchandise (en appuyant sur Choisir DUM) ;\n-\tCréer de nouveaux Certificats d’inspection ;\n-\tConsulter des Certificats d’inspection, en appuyant sur « Détails ».\n-\tTélécharger un Certificat d’inspection. \n-\tConsulter les demandes de Renvoi des Certificats d’inspection.\n"
@@ -599,7 +645,7 @@
       "tag": "SuppressionDuCertificatInspection ",
       "patterns": [
         "comment supprimer un certificat d'inspection?",
-        "supprimer un certificat d'inspection",
+        "supprimer le certificat d'inspection",
         "suppression certificat d'inspection"
       ],
       "responses": [
@@ -621,7 +667,7 @@
       "tag": "telechargementDeCI",
       "patterns": [
         "comment télécharger le certificat d'inspection?",
-        "telecharger le certificat d'inspection",
+        "télécharger le certificat d'inspection",
         "imprimer le certificat d'inspection"
       ],
       "responses": [

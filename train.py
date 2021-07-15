@@ -61,13 +61,13 @@ X_train = np.array(X_train)
 y_train = np.array(y_train)
 
 # Hyper-parameters
-num_classes = 61
+num_classes = 61 #nbre des tags
 num_epochs = 1000
 batch_size = 2
 learning_rate = 0.001
 
-input_size = len(X_train[0])
-hidden_size = 8
+input_size = len(X_train[0])#le total de mots
+hidden_size = 8#le nbre de neurones dans chaque couche cachée
 output_size = len(tags)
 num_layers = 2
 sequence_length = 1
@@ -95,6 +95,9 @@ train_loader = DataLoader(dataset=dataset,
                           batch_size=batch_size,
                           shuffle=True,
                           num_workers=0)
+test_loader = torch.utils.data.DataLoader(dataset=dataset,
+                                          batch_size=batch_size,
+                                          shuffle=False)
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -107,6 +110,7 @@ optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 # Train the model
 total_step = len(train_loader)
 for epoch in range(num_epochs):
+
     for i, (words, labels) in enumerate(train_loader):
         #words.shape
         words = words.reshape(-1, sequence_length, input_size).to(device)
@@ -126,6 +130,23 @@ for epoch in range(num_epochs):
 
     if (i + 1) % 100 == 0:
         print (f'Epoch [{epoch + 1}/{num_epochs}], Loss: {loss.item():.4f}')
+
+# Test the model
+# In test phase, we don't need to compute gradients (for memory efficiency)
+with torch.no_grad():
+    n_correct = 0
+    n_samples = 0
+    for words, labels in test_loader:
+        words = words.reshape(-1, sequence_length, input_size).to(device)
+        labels = labels.to(device)
+        outputs = model(words)
+        # max returns (value ,index)
+        _, predicted = torch.max(outputs.data, 1)
+        n_samples += labels.size(0)
+        n_correct += (predicted == labels).sum().item()
+
+    acc = 100.0 * n_correct / n_samples
+    print(f'Accuracy of the network on the 1000 test words: {acc} %')
 
 print(f'final loss: {loss.item():.4f}')
 
